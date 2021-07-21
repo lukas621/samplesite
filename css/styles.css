@@ -170,6 +170,13 @@ p {
   margin-bottom: 25px;
 }
 
+/* css for calculator */
+
+.input-sm {
+  width: 80px;
+}
+
+
 @media (max-width:991px) {
   #title {
     text-align: center;
