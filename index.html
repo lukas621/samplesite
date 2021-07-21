@@ -136,34 +136,31 @@
 
   <section id="press">
 
-    <img class="hospital-logo" src="images/UHN Logo.png" alt="tc-logo">
+    <img class="hospital-logo" src="images/uhn logo.png" alt="tc-logo">
 
   </section>
 
 
-  <!-- Time Estimates -->
+  <!-- Pricing -->
 
 
   <section id="time-estimates">
 
     <h2>Time estimates for eLearning Development</h2>
-    <p>Please use the following calculator to get an accurate time estimate for project completion.</p>
-
     <div class="row">
 
       <div class="time-colum col-lg-4">
 
         <div class="card rounded-4 shawdow-sm h-100">
           <div class="card-header">
-            <h3>Basic</h3>
+            <h3>Basic Level of interactivity</h3>
           </div>
           <div class="d-flex flex-column card-body">
             <h2> 15 days / 30 mins course</h2>
             <p>Basic course involve very limited interactivity such as assessment and sign-off question at the end of the lesson or module</p>
             <br>
             <p><strong>Sample courses</strong></p>
-            <p>TeamUHN COVID Attestation Course, Criminal Record Check - Annual Sign Off </p>
-            <button class="btn btn-lg btn-primary btn-dark w-100 mt-auto" type="button">Calculator</button>
+            <p>TeamUHN COVID Attestation Course</p>
           </div>
 
         </div>
@@ -175,14 +172,14 @@
 
         <div class="card rounded-4 shawdow-sm h-100">
           <div class="card-header">
-            <h3>Moderate</h3>
+            <h3>Moderate Level of interactivity</h3>
           </div>
           <div class="d-flex flex-column card-body">
             <h2>50 days / 30 mins course</h2>
             <p>Moderate course may contain some multiple choice questions, hyperlinks to additional resources, simple activities such as matching and drag-and drop, audio, and video.</p>
             <p><strong>Sample courses</strong></p>
             <p>Leadership Foundations for Creating a Safety Culture at UHN</p>
-            <button class="btn btn-lg btn-primary btn-dark w-100 mt-auto" type="button">Calculator</button>
+
           </div>
         </div>
 
@@ -192,7 +189,7 @@
 
         <div class="card rounded-4 shawdow-sm h-100">
           <div class="card-header">
-            <h3>Advanced</h3>
+            <h3>Advanced Level of interactivity</h3>
           </div>
           <div class="d-flex flex-column card-body">
             <h2>75 days / 30 mins course</h2>
@@ -200,11 +197,86 @@
             <br>
             <p><strong>Sample courses</strong></p>
             <p>Module 1 - Secondary IV Infusions - Check the Setup</p>
-            <button class="btn btn-lg btn-primary btn-dark w-100 mt-auto" type="button">Calculator</button>
           </div>
         </div>
 
       </div>
+
+    </div>
+
+    <p>Please use the calculator below to get an accurate time estimate for project completion.</p>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-lg btn-primary btn-dark w-20 mt-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Calculator
+    </button>
+
+    <!-- Modal -->
+    <form id="calculation_result">
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Calculator</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <!-- Number of PowerPoint Slide -->
+
+              <div class="row">
+                <div class="col-9">
+                  <p>Number of PowerPoint Slides</p>
+                </div>
+                <div class="col-3">
+                  <input class="input-sm" id="slideNumber" type="number" min= "0" max= "500" value="0"/>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-9">
+                  <p>Number of cutmozied images</p>
+                </div>
+                <div class="col-3">
+                  <input class="input-sm" id="imageNumber" type="number" min= "0" max= "500" value="0" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-9">
+                  <p>Number of cutmozied videos</p>
+                </div>
+                <div class="col-3">
+                  <input class="input-sm" id="videoNumber" type="number" min= "0" max= "500" value="0" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-9">
+                  <p>Number of software/hardware simulations</p>
+                </div>
+                <div class="col-3">
+                  <input class="input-sm" id="simulationNumber" type="number" min= "0" max= "500" value="0"/>
+                </div>
+              </div>
+
+              <br>
+
+              <div class="cal-result">
+                <p class="team-title"><strong>Estimated Development Time:</strong></p>
+                <p id="totalDevTime"></p>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="cal_button">Calculate</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </form>
 
 
   </section>
@@ -238,3 +310,6 @@
 </body>
 
 </html>
+
+
+<script src="js/main.js"></script>
